@@ -1,0 +1,49 @@
+Componentes Léxicos 
+
+1. Token -> El token consiste en un nombre y un valor de atributo opcional
+            representa un tipo de unidad léxica, como una palabra clave específica. 
+            Como un dicc {toke:valor}
+
+2. Patron -> Es la secuencia de caracteres que forman la palabra clave, el patrón es una
+             estructura más compleja que se relaciona mediante muchas cadenas. 
+
+3. Lexema -> Secuencia de caracteres en el programa fuente, son todos los tokens ordenados.
+             El orden de la "frase total" u "oración" 
+
+
+--------------------------------------------------
+Estructura del proyecto
+--------------------------------------------------
+- Todo resultado deberá generar un HTML
+    . Como errores 
+    . Como resultado de las operaciones
+
+- Se impieza leyendo lo que esta más adentro de la operación o esa los números
+    . O sea de adentro hacia afuera
+
+- Si hay un error no se ejecuta la operación 
+
+- Al darle ejecutar verifique la estructura y los errores, o sea todo en uno
+
+- Leer la info que se coloca en la caja de código 
+
+-----------------------------------
+Salida -> Resultado.html
+
+Función: 
+    - Titulo -> operaciones
+    - Descripción -> Lo que va en texto
+    - Tipo -> El resultado de todas las operaciones 
+
+------------------------------------
+Errores 
+Lexema -> Caracter que no esta mal 
+
+-----------------------------------
+Expresiones Regulares
+A | B -> representa disyunción " A o B "
+AB -> Representa  A y B
+A* -> Representa 0 o muchas repeticones de A
+A+ -> Representa "Al menos 1" repetición de A
+A? -> Representa "0 A 1" repetición A
+

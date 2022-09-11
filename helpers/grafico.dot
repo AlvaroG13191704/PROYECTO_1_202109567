@@ -1,0 +1,4 @@
+
+digraph {
+    nodo1[shape=plaintext,label = <<TABLE><TR><TD>Token</TD><TD>Fila</TD><TD>Columna</TD><TD>Descripción</TD></TR></TABLE>>]
+}
