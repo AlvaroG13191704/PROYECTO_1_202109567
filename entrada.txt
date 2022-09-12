@@ -1,5 +1,25 @@
-<Numero  > 4.50 < /Numero >
-<Numero  > 20 < / Numero >
+
+<Tipo>
+    <Operacion=RESTA>
+        <Numero > 4.50 < /Numero >
+        <Operacion=RESTA>
+                <Numero > 4.50 < /Numero >
+        <Numero > 4.50 < /Numero >
+        </Operacion>
+    </Operacion>
+    <Operacion=SUMA>
+        <Numero > 3.333 < /Numero >
+        <Numero > 2 < /Numero >
+    </Operacion>
+    <Operacion=SUMA>
+        <Numero > 3.333 < /Numero >
+        <Numero > 2 < /Numero >
+    </Operacion>
+</Tipo>
+
+
+
+
 
 
 
