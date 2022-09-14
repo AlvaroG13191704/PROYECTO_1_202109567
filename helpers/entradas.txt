@@ -1,0 +1,57 @@
+<Tipo>
+    <Operacion=SUMA>
+        <Numero > 3.333 < /Numero >
+        <Numero > 3 < /Numero >
+    </Operacion>
+    <Operacion=RESTA>
+        <Numero > 3.333 < /Numero >
+        <Numero > 3 < /Numero >
+    </Operacion>
+    <Operacion=MULTIPLICACION>
+        <Numero > 3.333 < /Numero >
+        <Numero > 3 < /Numero >
+    </Operacion>
+    <Operacion=DIVISION>
+        <Numero > 3.333 < /Numero >
+        <Numero > 3 < /Numero >
+    </Operacion>
+    <Operacion=POTENCIA>
+        <Numero > 3.333 < /Numero >
+        <Numero > 3 < /Numero >
+    </Operacion>
+    <Operacion=MOD>
+        <Numero > 3.333 < /Numero >
+        <Numero > 3 < /Numero >
+    </Operacion>
+</Tipo>
+
+<Tipo>
+    <Operacion=SUMA>
+        <Numero > 3.333 < /Numero >
+        <Operacion=SUMA>
+            <Numero > 5 < /Numero >
+            <Numero > 3 < /Numero >
+        </Operacion>
+    </Operacion>
+</Tipo>
+<Tipo>
+    <Operacion=MOD>
+        <Numero > 3.333 < /Numero >
+        <Numero > 323 < /Numero >
+    </Operacion>
+    <Operacion=RAIZ>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=INVERSO>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=SENO>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=COSENO>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=TANGENTE>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+</Tipo>

@@ -18,7 +18,7 @@ class L_Tokens(Enum):
     TK_O_SUM = "SUMA"
     TK_O_REST = "RESTA"
     TK_O_MULT = "MULTIPLICACION"
-    TK_O_DIV = "DIVISON"
+    TK_O_DIV = "DIVISION"
     TK_O_PO = "POTENCIA"
     TK_O_SQR = "RAIZ"
     TK_O_INV = "INVERSO"
@@ -28,3 +28,4 @@ class L_Tokens(Enum):
     TK_O_MOD = "MOD"
     # Third read the type
     TK_TYPE = "Tipo"
+    

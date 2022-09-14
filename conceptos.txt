@@ -1,3 +1,24 @@
+_______________________________
+Lectura: 
+    <Numero> </Numero> -> done
+    <Operacion=SUMA> </Operacion> -> obtener las operaciones
+    <Tipo> </Tipo> -> done
+    <Texto> </Texto> -> no
+    <Funcion=ESCRIBIR> -> no
+        <titulo>Operaciones</titulo> -> no
+        <Descripcion> [TEXTO] </Descripcion> -> no
+        <Contenido> [TIPO] </Contenido> -> no
+    </Funcion>
+
+_______________________________
+
+
+
+
+
+
+
+
 Componentes Léxicos 
 
 1. Token -> El token consiste en un nombre y un valor de atributo opcional

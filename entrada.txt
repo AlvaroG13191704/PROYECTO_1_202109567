@@ -1,21 +1,35 @@
-
 <Tipo>
-    <Operacion=RESTA>
-        <Numero > 4.50 < /Numero >
-        <Operacion=RESTA>
-                <Numero > 4.50 < /Numero >
-        <Numero > 4.50 < /Numero >
-        </Operacion>
-    </Operacion>
-    <Operacion=SUMA>
+    <Operacion=RAIZ>
         <Numero > 3.333 < /Numero >
-        <Numero > 2 < /Numero >
     </Operacion>
-    <Operacion=SUMA>
+    <Operacion=INVERSO>
         <Numero > 3.333 < /Numero >
-        <Numero > 2 < /Numero >
+    </Operacion>
+    <Operacion=SENO>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=COSENO>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=TANGENTE>
+        <Numero > 3.333 < /Numero >
     </Operacion>
 </Tipo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
