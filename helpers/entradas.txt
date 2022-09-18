@@ -55,3 +55,14 @@
         <Numero > 3.333 < /Numero >
     </Operacion>
 </Tipo>
+<Funcion=ESCRIBIR>
+    <Titulo>Operaciones</Titulo>
+    <Descripcion>[TEXTO]</Descripcion>
+    <Contenido>[TIPO]</Contenido>
+</Funcion>
+
+<Estilo>
+    <Titulo Color=Azul Tamanio=12 />
+    <Descripcion Color=VERDE Tamanio=3/>
+    <Contenido Color=GRIS Tamanio=3/>
+</Estilo>

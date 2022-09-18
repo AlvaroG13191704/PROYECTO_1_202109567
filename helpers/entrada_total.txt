@@ -1,0 +1,83 @@
+<Tipo>
+    <Operacion=MOD>
+        <Numero > 3.333 < /Numero >
+        <Numero > 323 < /Numero >
+    </Operacion>
+    <Operacion=RAIZ>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=INVERSO>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=SENO>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=COSENO>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=TANGENTE>
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+</Tipo>
+
+<Texto> 
+    Realizar las operaciones basicas de suma, resta, multiplicacion y division, asi como operaciones complejas. 
+</Texto>
+
+<Funcion=ESCRIBIR>
+    <Titulo>Operaciones</Titulo>
+    <Descripcion>TEXTO</Descripcion>
+    <Contenido>TIPO</Contenido>
+</Funcion>
+
+        #make the operation
+        
+        # for i in self.global_list_operations:
+        #     result = i.print_operation()
+        #     print(f'{result["text"]} \n{result["n1"]} {result["sign"]} {result["n2"]} = {result["result"]} \n')
+
+        # for i in self.global_list_operations:
+        #     result = i.print_operation()
+        #     print(f'{result["text"]} \n{result["sign"]} -> {result["n"]} = {result["result"]} \n')
+             # if "TITULO" == i:
+                #     if self.isLabel(_string, "<Titulo>"):
+                #         print('Entramos a titulo')
+                #         _result = self.Title(self,_string)
+                #         print(_result)
+                #         _string = _result['string']
+                #         print(_string)
+                #         if _result['error']:
+                #             # Save the error
+                #             print('Ocurrio un Error en funcion titulo')
+                #             # Instance an object error
+                #             e = Lexical_Errors(i,self.line,self.col,"Error")
+                #             self.global_list_errors.append(e)
+                #             return {'result':"",'string':_string,'error':True}
+
+                if "DESCRIPCION" == i:
+                    if self.isLabel(_string, "<Descripcion>"):
+                        _result = self.Description(self, _string)
+                        _string = _result['string']
+
+                        if _result['error']:
+                            # Save the error
+                            print('Ocurrio un Error en funcion descripcion')
+                            # Instance an object error
+                            e = Lexical_Errors(i,self.line,self.col,"Error")
+                            self.global_list_errors.append(e)
+                            return {'result':"",'string':_string,'error':True}
+                
+                elif "CONTENIDO" == i:
+                    if self.isLabel(_string, "<Contenido>"):
+                        _result = self.Content(self, _string)
+                        _string = _result['string']
+
+                        if _result['error']:
+                            # Save the error
+                            print('Ocurrio un Error en funcion contenidos')
+                            # Instance an object error
+                            e = Lexical_Errors(i,self.line,self.col,"Error")
+                            self.global_list_errors.append(e)
+                            return {'result':"",'string':_string,'error':True}
+                        
+                else:

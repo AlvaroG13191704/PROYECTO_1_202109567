@@ -1,0 +1,72 @@
+digraph  ERRORES {
+    node[shape=plaintext];
+
+    tabla[label =<
+    <TABLE>
+        <TR>
+            <td>No.</td>
+            <td>Lexema</td>
+            <td>Tipo</td>
+            <td>Columna</td>
+            <td>Fila</td>
+        </TR>
+
+        <TR>
+            <TD>1</TD>
+            <TD>Numero</TD>
+            <TD>Error</TD>
+            <TD>15</TD>
+            <TD>27</TD>
+        </TR>
+
+        <TR>
+            <TD>2</TD>
+            <TD>NUMERO</TD>
+            <TD>Error</TD>
+            <TD>15</TD>
+            <TD>27</TD>
+        </TR>
+
+        <TR>
+            <TD>3</TD>
+            <TD>OPERACIONES</TD>
+            <TD>Error</TD>
+            <TD>15</TD>
+            <TD>27</TD>
+        </TR>
+
+        <TR>
+            <TD>4</TD>
+            <TD>&lt;</TD>
+            <TD>Error</TD>
+            <TD>15</TD>
+            <TD>27</TD>
+        </TR>
+
+        <TR>
+            <TD>5</TD>
+            <TD>&lt;</TD>
+            <TD>Error</TD>
+            <TD>15</TD>
+            <TD>27</TD>
+        </TR>
+
+        <TR>
+            <TD>6</TD>
+            <TD>&lt;</TD>
+            <TD>Error</TD>
+            <TD>15</TD>
+            <TD>27</TD>
+        </TR>
+
+        <TR>
+            <TD>7</TD>
+            <TD>&lt;</TD>
+            <TD>Error</TD>
+            <TD>15</TD>
+            <TD>27</TD>
+        </TR>
+
+    </TABLE>
+    >];
+}

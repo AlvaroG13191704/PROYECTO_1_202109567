@@ -1,40 +1,61 @@
 <Tipo>
-    <Operacion=RAIZ>
+    <Operacion=SUMA>
+        <Numero > 2 < /Numero >
         <Numero > 3.333 < /Numero >
     </Operacion>
-    <Operacion=INVERSO>
+    <Operacion=RESTA>
+        <Numero > 2 < /Numero >
         <Numero > 3.333 < /Numero >
     </Operacion>
+    <Operacion=MULTIPLICACION>
+        <Numero > 2 < /Numero >
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=DIVISION>
+        <Numero > 2 < /Numero >
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+    <Operacion=POTENCIA>
+        <Numero > 2 < /Numero >
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+        <Operacion=MOD>
+        <Numero > 2 < /Numero >
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+        <Operacion=RAIZ>
+        <Numero > 2 < /Numero >
+        <Numero > 3.333 < /Numero >
+    </Operacion>
+        <Operacion=INVERSO>
+        <Numero > 2 < /Numero >
+    </Operacion>    
     <Operacion=SENO>
-        <Numero > 3.333 < /Numero >
+        <Numero > 2 < /Numero >
     </Operacion>
-    <Operacion=COSENO>
-        <Numero > 3.333 < /Numero >
+        <Operacion=COSENO>
+        <Numero > 2 < /Numero >
     </Operacion>
-    <Operacion=TANGENTE>
-        <Numero > 3.333 < /Numero >
+        <Operacion=TANGENTE>
+        <Numero > 2 < /Numero >
+        <Numero > 2 < /Numero >
     </Operacion>
 </Tipo>
 
+<Texto> 
+Realizar las operaciones basicas de suma, resta, multiplicacion y division, asi como operaciones complejas. 
+</Texto>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<Funcion=ESCRIBIR>
+    <Titulo>Operaciones</Titulo>
+    <Descripcion>[TEXTO]</Descripcion>
+    <Contenido>[TIPO]</Contenido>
+</Funcion>
+<Estilo>
+    <Titulo Color=AZUL Tamanio=40 />
+    <Descripcion Color=VERDE Tamanio=25/>
+    <Contenido Color=MORADO Tamanio=20/>
+</Estilo>
 
 
 

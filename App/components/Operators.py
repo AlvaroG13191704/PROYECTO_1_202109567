@@ -9,6 +9,7 @@ class  Double_Operations:
         self.n1 = float(n1)
         self.sign = sign
         self.n2 = float(n2)
+        self.size = 3
     
     def print_operation(self):
         # print each operation
@@ -32,33 +33,30 @@ class  Double_Operations:
                 return {'result':'No se puede efectuar la división','text':'Operación multiplicacion','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
 
         elif self.sign == "**":
-            result = self.n1 ** self.n2
-            return {'result':str(result),'text':'Operación potencia','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
+            result = self.n2 ** self.n1
+            return {'result':str(result),'text':'Operación potencia','sign':self.sign,'n1': str(self.n2),'n2': str(self.n1)}
         
         elif self.sign == "mod":
             result = self.n1 % self.n2
-            return {'result':str(result),'text':'Operación mod','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
+            return {'result':str(result),'text':'Operación mod','sign':'%','n1': str(self.n1),'n2': str(self.n2)}
+
+        elif self.sign == 'sqr':
+            result = (self.n2)**(1/self.n1)
+            return {'result':str(result), 'text': 'Operación raiz', 'sign': self.sign, 'n1': str(self.n1),'n2': str(self.n2)}
 
 class Single_Operations:
     def __init__(self, n, sign) -> None:
         
         self.n = float(n)
         self.sign = sign
+        self.size = 2
     
     def print_operation(self):
         # return an dict from an operation
-        if self.sign == 'sqr':
-            result = math.sqrt(self.n)
-            return {'result':str(result), 'text': 'Operación raiz', 'sign': self.sign, 'n':str(self.n)}
-        
-        elif self.sign == 'inv':
+        if self.sign == 'inv':
             result = 1/self.n
             return {'result':str(result), 'text': 'Operación inverso', 'sign': '1/', 'n':str(self.n)}
-        
-        elif self.sign == 'inv':
-            result = 1/self.n
-            return {'result':str(result), 'text': 'Operación inverso', 'sign': '1/', 'n':str(self.n)}
-        
+            
         elif self.sign == 'sen':
             result = math.sin(self.n)
             return {'result':str(result), 'text': 'Operación seno', 'sign': self.sign, 'n':str(self.n)}
