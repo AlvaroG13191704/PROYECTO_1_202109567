@@ -12,7 +12,7 @@ class L_Tokens(Enum):
     TK_EQUAL = "="
     TK_KEY_LEFT = "\["
     TK_KEY_RIGHT = "\]"
-    # first read the deep end <Numero> 4.5 </Numero>
+    # first read
     TK_E_NUMBER = "Numero"
     TK_NUMBER = "[0-9]*[.]?[0-9]+"
     # second read the operator
@@ -32,7 +32,7 @@ class L_Tokens(Enum):
     TK_TYPE = "Tipo"
     # Fourth read 
     TK_E_TEXT = "Texto"
-    TK_TEXT = "[A-Za-z0-9_ .,]*"
+    TK_TEXT = "[a-zA-Z,À-ÿ\u00f1\u00d1,'+'-'-','*',0.0-9.0  *,':','%','=','/','^','(',')'*]*"
     # Fifth raed
     TK_E_FUN = "Funcion"
     TK_E_WRITE = "ESCRIBIR"

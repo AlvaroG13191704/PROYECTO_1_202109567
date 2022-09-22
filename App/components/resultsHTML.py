@@ -3,7 +3,7 @@
 
 # This function received some parameters to build an HTML document 
 
-def generateHTMLResult(list_r, list_s, title="Titulo", text="Texto"):
+def generateHTMLResult(list_r, list_s, title="Titulo",text=[]):
     html = f'''
 <!DOCTYPE html>
 <html lang="en">
@@ -72,17 +72,18 @@ def generateHTMLResult(list_r, list_s, title="Titulo", text="Texto"):
 </style>
     '''
     # modified text
-    new_text = text.replace(",",", ")
-    new_text1 = new_text.replace("y"," y ")
-    new_text2 = new_text1.replace("las"," las ")
-    new_text3 = new_text2.replace("como"," como ")
-    new_text4 = new_text3.replace("de"," de ")
-    new_text5 = new_text4.replace("complejas"," complejas ")
-    new_text6 = new_text5.replace("basicas"," basicas ")
+    text_v = ""
+    # list = text.pop(0)
+    for i in text:
+        print(i)
+        text_v += f'{i} <br>'
+    
+    # title
+    n_title = title.replace('Operaciones',' Operaciones ')
     html += f'''
 <body>
-    <h1>{title}</h1>
-    <h3>{new_text6}</h3>
+    <h1>{n_title}</h1>
+    <h3>{text_v}</h3>
     '''
     # Made the operations
     html_operations = """

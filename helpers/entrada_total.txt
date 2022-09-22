@@ -1,83 +1,62 @@
 <Tipo>
-    <Operacion=MOD>
-        <Numero > 3.333 < /Numero >
-        <Numero > 323 < /Numero >
+<Operacion=SUMA>
+    <Operacion=MULTIPLICACION>
+        <Numero>20</Numero>
+        <Numero>4</Numero>
     </Operacion>
+
+    <Operacion=DIVISION>
+        <Numero>500</Numero>
+        <Numero>5</Numero>
+    </Operacion>
+</Operacion>
+
+<Operacion=RESTA>
+    <Operacion=POTENCIA>
+        <Numero>6</Numero>
+        <Numero>5</Numero>
+    </Operacion>
+
     <Operacion=RAIZ>
-        <Numero > 3.333 < /Numero >
+        <Numero>2</Numero>
+        <Numero>64</Numero>
+    </Operacion>
+</Operacion>
+
+<Operacion=SUMA>
+    <Operacion=TANGENTE>
+        <Numero>30</Numero>
     </Operacion>
     <Operacion=INVERSO>
-        <Numero > 3.333 < /Numero >
+        <Operacion=SUMA>
+            <Operacion=SENO>
+                <Numero>90</Numero>
+            </Operacion>
+            <Operacion=COSENO>
+                <Numero>90</Numero>
+            </Operacion>
+        </Operacion>
     </Operacion>
-    <Operacion=SENO>
-        <Numero > 3.333 < /Numero >
-    </Operacion>
-    <Operacion=COSENO>
-        <Numero > 3.333 < /Numero >
-    </Operacion>
-    <Operacion=TANGENTE>
-        <Numero > 3.333 < /Numero >
-    </Operacion>
+</Operacion>
 </Tipo>
 
-<Texto> 
-    Realizar las operaciones basicas de suma, resta, multiplicacion y division, asi como operaciones complejas. 
+
+<Texto>
+Archivo de prueba para operaciones COMPLEJAS
+RESULTADOS ESPERADOS
+OP1 COMPLEJA: (20*4)+(500/5) = 180
+OP2 COMPLEJA: (5^6)-(2sqr64) = 15617
+OP3 COMPLEJA: TAN(30)+(1/(SEN(90)+COS(90))) = 1.577350269
 </Texto>
 
-<Funcion=ESCRIBIR>
-    <Titulo>Operaciones</Titulo>
-    <Descripcion>TEXTO</Descripcion>
-    <Contenido>TIPO</Contenido>
+<Funcion = ESCRIBIR>
+    <Titulo> Operaciones COMPLEJAS </Titulo>
+    <Descripcion> [TEXTO] </Descripcion>
+    <Contenido> [TIPO] </Contenido>
 </Funcion>
 
-        #make the operation
-        
-        # for i in self.global_list_operations:
-        #     result = i.print_operation()
-        #     print(f'{result["text"]} \n{result["n1"]} {result["sign"]} {result["n2"]} = {result["result"]} \n')
-
-        # for i in self.global_list_operations:
-        #     result = i.print_operation()
-        #     print(f'{result["text"]} \n{result["sign"]} -> {result["n"]} = {result["result"]} \n')
-             # if "TITULO" == i:
-                #     if self.isLabel(_string, "<Titulo>"):
-                #         print('Entramos a titulo')
-                #         _result = self.Title(self,_string)
-                #         print(_result)
-                #         _string = _result['string']
-                #         print(_string)
-                #         if _result['error']:
-                #             # Save the error
-                #             print('Ocurrio un Error en funcion titulo')
-                #             # Instance an object error
-                #             e = Lexical_Errors(i,self.line,self.col,"Error")
-                #             self.global_list_errors.append(e)
-                #             return {'result':"",'string':_string,'error':True}
-
-                if "DESCRIPCION" == i:
-                    if self.isLabel(_string, "<Descripcion>"):
-                        _result = self.Description(self, _string)
-                        _string = _result['string']
-
-                        if _result['error']:
-                            # Save the error
-                            print('Ocurrio un Error en funcion descripcion')
-                            # Instance an object error
-                            e = Lexical_Errors(i,self.line,self.col,"Error")
-                            self.global_list_errors.append(e)
-                            return {'result':"",'string':_string,'error':True}
-                
-                elif "CONTENIDO" == i:
-                    if self.isLabel(_string, "<Contenido>"):
-                        _result = self.Content(self, _string)
-                        _string = _result['string']
-
-                        if _result['error']:
-                            # Save the error
-                            print('Ocurrio un Error en funcion contenidos')
-                            # Instance an object error
-                            e = Lexical_Errors(i,self.line,self.col,"Error")
-                            self.global_list_errors.append(e)
-                            return {'result':"",'string':_string,'error':True}
-                        
-                else:
+<Estilo>
+    <Titulo Color=NEGRO Tamanio=20/>
+    <Descripcion Color=ROJO Tamanio=10/>
+    <Contenido Color=AZUL Tamanio=10/>
+</Estilo> 

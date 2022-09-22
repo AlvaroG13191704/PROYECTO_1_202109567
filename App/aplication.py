@@ -1,5 +1,8 @@
+import os
 import tkinter as tk
+from tkinter import messagebox
 from tkinter.filedialog import askopenfile, asksaveasfilename
+
 
 # imports from components
 from components.LexicalAnalyzer import LexicalAnalyzer
@@ -63,7 +66,7 @@ class GUI(tk.Tk):
         if not self.open_file: 
             return
         # Read the selected file
-        with open(self.open_file.name, 'r+') as self.file:
+        with open(self.open_file.name, 'r+',encoding='UTF-8') as self.file:
             text = self.file.read() # read content
             self.txt_area.insert(1.0,text) # insert the text into the text area
             self.title(f'* Analizador Léxico - {self.file.name}') 
@@ -94,15 +97,29 @@ class GUI(tk.Tk):
     def _analyze(self):
         reader = LexicalAnalyzer()
         reader.compile(self.txt_area.get(1.0,tk.END))
-    
+
+        messagebox.showinfo(message='Se ha analizado el contenido', title='Analizador')
+        
     def _manual_user(self):
-        pass
+        os.system('start M_U.pdf')
 
     def _manual_tec(self):
-        pass
+        os.system('start M_T.pdf')
     
     def _help(self):
-        pass
+        self.withdraw()
+        window = tk.Toplevel(self)
+        window.geometry('550x400+700+200')
+        window.title('Temas de Ayuda')
+        #Functions
+        def back():
+            self.deiconify()
+            window.destroy()
+        tk.Label(window,text='Lenguajes Formales y de Programación - Sección B-',font=("Verdana",14)).grid(row=0,column=0,sticky='WE',padx=10,pady=10)
+        tk.Label(window,text='Alvaro Norberto García Meza',font=("Verdana",14)).grid(row=1,column=0,sticky='WE',padx=10,pady=10)
+        tk.Label(window,text='Carnet: 202109567',font=("Verdana",14)).grid(row=2,column=0,sticky='WE',padx=10,pady=10)        
+        btn_back = tk.Button(window,text='Regresar',command=back,height=2,width=15)
+        btn_back.grid(row=3,column=0)
 
 
 if __name__ == '__main__':

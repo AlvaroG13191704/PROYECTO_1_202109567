@@ -15,34 +15,34 @@ class  Double_Operations:
         # print each operation
         if self.sign == "+":
             result = self.n1 + self.n2
-            return {'result':str(result),'text':'Operación Suma','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
+            return {'result':str(result),'text':'Operacion Suma','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
         
         elif self.sign == "-":
             result = self.n1 - self.n2
-            return {'result':str(result),'text':'Operación resta','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
+            return {'result':str(result),'text':'Operacion resta','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
 
         elif self.sign == "*":
             result = self.n1 * self.n2
-            return {'result':str(result),'text':'Operación multiplicacion','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
+            return {'result':str(result),'text':'Operacion multiplicacion','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
         
         elif self.sign == "/":
             try:
                 result = self.n1 / self.n2
-                return {'result':str(result),'text':'Operación división','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
+                return {'result':str(result),'text':'Operacion division','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
             except ZeroDivisionError :
-                return {'result':'No se puede efectuar la división','text':'Operación multiplicacion','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
+                return {'result':'No se puede efectuar la división','text':'Operación division','sign':self.sign,'n1': str(self.n1),'n2': str(self.n2)}
 
         elif self.sign == "**":
             result = self.n2 ** self.n1
-            return {'result':str(result),'text':'Operación potencia','sign':self.sign,'n1': str(self.n2),'n2': str(self.n1)}
+            return {'result':str(result),'text':'Operacion potencia','sign':self.sign,'n1': str(self.n2),'n2': str(self.n1)}
         
         elif self.sign == "mod":
             result = self.n1 % self.n2
-            return {'result':str(result),'text':'Operación mod','sign':'%','n1': str(self.n1),'n2': str(self.n2)}
+            return {'result':str(result),'text':'Operacion mod','sign':'%','n1': str(self.n1),'n2': str(self.n2)}
 
         elif self.sign == 'sqr':
             result = (self.n2)**(1/self.n1)
-            return {'result':str(result), 'text': 'Operación raiz', 'sign': self.sign, 'n1': str(self.n1),'n2': str(self.n2)}
+            return {'result':str(result), 'text': 'Operacion raiz', 'sign': self.sign, 'n1': str(self.n1),'n2': str(self.n2)}
 
 class Single_Operations:
     def __init__(self, n, sign) -> None:
@@ -55,17 +55,20 @@ class Single_Operations:
         # return an dict from an operation
         if self.sign == 'inv':
             result = 1/self.n
-            return {'result':str(result), 'text': 'Operación inverso', 'sign': '1/', 'n':str(self.n)}
+            return {'result':str(result), 'text': 'Operacion inverso', 'sign': '1/', 'n':str(self.n)}
             
         elif self.sign == 'sen':
-            result = math.sin(self.n)
-            return {'result':str(result), 'text': 'Operación seno', 'sign': self.sign, 'n':str(self.n)}
+            result_n = self.n*(math.pi/180)
+            result = math.sin(result_n)
+            return {'result':str(result), 'text': 'Operacion seno', 'sign': self.sign, 'n':str(self.n)}
 
         elif self.sign == 'cos':
-            result = math.cos(self.n)
-            return {'result':str(result), 'text': 'Operación coseno', 'sign': self.sign, 'n':str(self.n)}
+            result_n = self.n*(math.pi/180)
+            result = math.cos(result_n)
+            return {'result':str(result), 'text': 'Operacion coseno', 'sign': self.sign, 'n':str(self.n)}
         
         elif self.sign == 'tan':
-            result = math.tan(self.n)
-            return {'result':str(result), 'text': 'Operación tangente', 'sign': self.sign, 'n':str(self.n)}
+            result_n = self.n*(math.pi/180)
+            result = math.tan(result_n)
+            return {'result':str(result), 'text': 'Operacion tangente', 'sign': self.sign, 'n':str(self.n)}
         

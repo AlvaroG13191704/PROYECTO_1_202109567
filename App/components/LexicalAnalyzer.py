@@ -27,7 +27,7 @@ class LexicalAnalyzer:
         self.global_list_errors = [] # to save global errrors
         self.global_list_operations = [] # to save the operations 
         self.global_list_styles = [] # save the styles
-        self.dict_t_t = {} # dic to save title and text
+        self.dict_t_t = {} # dic to save title
     
     # Remove the character being read
     def remove(self, _string:str, _num:int):
@@ -330,6 +330,7 @@ class LexicalAnalyzer:
         
         list_numbers = complete.split(" ")
         print(f'{list_numbers}  -> tamaño {len(list_numbers)}')
+        # print(f'{_operations} -> Operacion compleja')
         result = None
         if len(list_numbers) == 3:
             operation = Double_Operations(list_numbers[0],list_numbers[1],list_numbers[2])
@@ -353,7 +354,7 @@ class LexicalAnalyzer:
             return {'result':_number,'string':_string,'error':True}
         
         # print(f'Números obtenidos en operación -> {_number}')
-        return {'result':result,'string':_string,'error':False}
+        return {'result':result['result'],'operators':list_numbers,'string':_string,'error':False}
 
     # The last part -> the Type
     def Type(self,_string: str):
@@ -457,7 +458,6 @@ class LexicalAnalyzer:
                 self.global_list_errors.append(e)
                 return {'result':_text,'string':_string,'error':True}
 
-        self.dict_t_t['text'] = _text
         return {'result':_text,'string':_string,'error':False}
 
     def Title(self, _string: str):
@@ -835,9 +835,9 @@ class LexicalAnalyzer:
 
                 self.col += int(s.end()) # get the column
                 
-                if i == L_Tokens.TK_TEXT.value: # get the texts
+                if i == L_Tokens.TK_TITLE.value: # get the texts
                     _title += s.group()
-                    self.dict_t_t['title'] = _title
+                    self.dict_t_t['title'] = f"{_title} "
                 #Save the token -> next class
                 _string = self.remove(_string,s.end()) # .end the column end in the pattern
 
@@ -966,7 +966,16 @@ class LexicalAnalyzer:
         # Clean the empty values and "\n"
         new_string = ""
         string_list = []
-        # using replace 
+        # take the text from <Texto>
+        text_list = []
+        for t in range(len(content)):
+            if content[t] == "<Texto>":
+                c = 0
+                while content[t+c] != "</Texto>":
+                    text_list.append(content[t+c])
+                    c += 1
+
+        # using replace
         for i in content:
             i = i.replace(' ', '') # replace empty values
             i = i.replace('\n','') # replace jump lines
@@ -976,27 +985,28 @@ class LexicalAnalyzer:
 
         # identify when we makee a new line change
         self.string_list = string_list
-        
-        #call the Type method
-        result_of_Type = self.Type(new_string)
+        print(self.Type(new_string))
+        # #call the Type method
+        # result_of_Type = self.Type(new_string)
 
-        # Pass resulto to Text
-        result_of_fun = self.Text(result_of_Type['string'])
+        # # Pass resulto to Text
+        # result_of_fun = self.Text(result_of_Type['string'])
 
-        result_of_styles = self.Function(result_of_fun['string'])
+        # result_of_styles = self.Function(result_of_fun['string'])
 
-        print(self.Style(result_of_styles['string']))
+        # print(self.Style(result_of_styles['string']))
 
-        if self.dict_t_t != {}:
-            # generate a HTML results
-            generateHTMLResult(self.global_list_operations,self.global_list_styles,self.dict_t_t['title'],self.dict_t_t['text'])
-            # generate the erros
-            errorsHTML(self.global_list_errors)
-        else:
-            # generate a HTML results
-            generateHTMLResult(self.global_list_operations,self.global_list_styles)
-            # generate the erros
-            errorsHTML(self.global_list_errors)
+        # if self.dict_t_t != {}:
+        #     # generate a HTML results
+        #     print(self.dict_t_t)
+        #     generateHTMLResult(self.global_list_operations,self.global_list_styles,self.dict_t_t['title'],text_list)
+        #     # generate the erros
+        #     errorsHTML(self.global_list_errors)
+        # else:
+        #     # generate a HTML results
+        #     generateHTMLResult(self.global_list_operations,self.global_list_styles,'Titulo Error',text_list)
+        #     # generate the erros
+        #     errorsHTML(self.global_list_errors)
     
 
 
