@@ -1,0 +1,18 @@
+
+digraph  ERRORES {
+    node[shape=plaintext];
+    
+    tabla[label =< 
+    <TABLE>
+        <TR>
+            <td>No.</td>
+            <td>Lexema</td>
+            <td>Tipo</td>
+            <td>Columna</td>
+            <td>Fila</td>
+        </TR>
+    
+    </TABLE>
+    >];
+}
+    

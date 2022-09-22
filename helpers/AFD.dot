@@ -1,0 +1,213 @@
+
+digraph etiqueta_estilos {
+    rankdir = LR
+    node[shape=circle]
+
+    S0 -> S1 [label="<"]
+    S1 -> S2 [label="Estilo"]
+    S2 -> S3 [label=">"]
+    // titulo
+    S3 -> S4
+    S4 -> S5 [label ="<"]
+    S5 -> S6 [label ="Titulo"]
+    S6 -> S7 [label ="Color"]
+    S7 -> S8 [label ="="]
+    // COLORES
+    S8 -> S10[label="ROJO"]
+    S8 -> S11[label="AZUL"]
+    S8 -> S12[label="AMARILLO"]
+    S8 -> S13[label="VERDE"]
+    S8 -> S14[label="NARANJA"]
+    S8 -> S15[label="MORADO"]
+    S8 -> S16[label="NEGRO"] 
+    // Tamaño
+    S10,S11,S12,S13,S14,S15,S16 -> S17 [label="Tamanio"]
+    S17 -> S18 [label="[0-9]"]
+    S18 -> S19 [label="/"]
+    S19 -> S20 [label=">"]
+
+    // Descripcion 
+    S20 -> S21 [label="<Descripcion"]
+    S21 -> S22 [label="Color"]
+    S22 -> S23 [label="="]
+    // COLORES
+    S23 -> S24[label="ROJO"]
+    S23 -> S25[label="AZUL"]
+    S23 -> S26[label="AMARILLO"]
+    S23-> S27[label="VERDE"]
+    S23 -> S28[label="NARANJA"]
+    S23 -> S29[label="MORADO"]
+    S23 -> S30[label="NEGRO"] 
+    // Tamaño
+    S24,S25,S26,S27,S28,S29,S30 -> S31 [label="Tamanio"]
+    S31 -> S32 [label="[0-9]"]
+    S32 -> S33 [label="/"]
+    S33 -> S34 [label=">"]
+
+    // Contenido 
+    S34 -> S35 [label="<Contenido"]
+    S35 -> S36 [label="Color"]
+    S36 -> S37 [label="="]
+    // COLORES
+    S37 -> S38[label="ROJO"]
+    S37 -> S39[label="AZUL"]
+    S37 -> S40[label="AMARILLO"]
+    S37-> S41[label="VERDE"]
+    S37 -> S42[label="NARANJA"]
+    S37 -> S43[label="MORADO"]
+    S37 -> S44[label="NEGRO"] 
+    // Tamaño
+    S38,S39,S40,S41,S42,S43,S44 -> S45 [label="Tamanio"]
+    S45 -> S46 [label="[0-9]"]
+    S46 -> S47 [label="/"]
+    S47 -> S48 [label=">"]
+
+    //fin
+    S48 -> S49 [label="<"]
+    S49 -> S50 [label="/"]
+    S50 -> S51 [label="Estilo"]
+    S51 -> S52 [label=">"]       
+}
+
+
+// digraph etiqueta_funcion {
+//     rankdir = LR
+//     node[shape=circle]
+
+//     S0 -> S1 [label="<"]
+//     S1 -> S2 [label="Funcion"]
+//     S2 -> S3 [label="="]
+//     S3 -> S4 [label="ESCRIBIR"]
+//     S4 -> S5 [label=">"]
+//     // titulo
+//     S5 -> S6
+//     S6 -> S7 [label ="<"]
+//     S7 -> S8 [label ="Titulo"]
+//     S8 -> S9 [label =">"]
+//     S9 -> S10 [label ="[A-Za-z0-9_ .,]*"]
+//     S10 -> S11 [label ="<"]
+//     S11 -> S12 [label ="/"]
+//     S12 -> S13 [label ="Titulo"]
+//     S13 -> S14 [label =">"]
+//     // Descripcion
+//     S14 -> S15
+//     S15 -> S16 [label ="<"]
+//     S16 -> S17 [label ="Descripcion"]
+//     S17 -> S18 [label =">"]
+//     S18 -> S19 [label ="[TEXTO]"]
+//     S19 -> S20 [label ="<"]
+//     S20 -> S21 [label ="/"]
+//     S21 -> S22 [label ="Descripcion"]
+//     S22 -> S23 [label =">"]    
+//     // Contenido
+//     S23 -> S24
+//     S24 -> S25 [label ="<"]
+//     S25 -> S26 [label ="Contenido"]
+//     S26 -> S27 [label =">"]
+//     S27 -> S28 [label ="[Tipo]"]
+//     S28 -> S29 [label ="<"]
+//     S29 -> S30 [label ="/"]
+//     S30 -> S31 [label ="Contenido"]
+//     S31 -> S32 [label =">"]
+//     //final
+//     S32 -> S33
+//     S37[shape=record]
+//     S33 -> S34 [label="<"]
+//     S34 -> S35 [label="/"]
+//     S35 -> S36 [label="Funcion"]
+//     S36 -> S37 [label=">"]          
+// }
+// digraph etiqueta_funcion {
+//     rankdir = LR
+//     node[shape=circle]
+
+//     F0 -> F1 [label="<"]
+//     F1 -> F2 [label="Funcion"]
+//     F2 -> F3 [label="="]
+//     F3 -> F4 [label="ESCRIBIR"]
+//     F4 -> F5 [label=">"]
+// }
+
+// digraph etiqueta_texto {
+//     rankdir = LR
+//     node[shape=circle]
+
+//     // Texto
+//     T0 -> T1 [label="<"]
+//     T1 -> T2 [label="Texto"]
+//     T2 -> T3 [label=">"]
+//     T3 -> T4 [label="[A-Za-z0-9_ .,]*"]
+//     T4 -> T5 [label="<"]
+//     T5 -> T6 [label="/"]
+//     T6 -> T7 [label="Texto"]
+//     T8[shape=record]
+//     T7 -> T8 [label=">"]    
+// }
+
+// digraph etiqueta_Tipo{
+//     rankdir = LR
+//     node[shape=circle]
+//     // <Tipo>
+//     T0 -> T1 [label="<"]
+//     T1 -> T2 [label="Tipo"]
+//     T2 -> T3 [label=">"]
+
+//     //<Operacion = operador_doble>
+//     T3 -> P0 [label="<"]
+//     P0 -> P1 [label ="Operacion"]
+//     P1 -> P2 [label ="="]
+//     P2 -> P3 [label ="SUMA"]
+//     P2 -> P4 [label ="RESTA"]
+//     P2 -> P5 [label ="MULTIPLICACION"]
+//     P2 -> P6 [label ="DIVISION"]
+//     P2 -> P6 [label ="POTENCIA"]
+//     P2 -> P7 [label ="RAIZ"]
+//     P2 -> P8 [label ="MOD"]
+//     // >
+//     P3,P4,P5,P6,P7,P8 -> P9 [label=">"]
+//     // aca se puede hacer dos numeros
+//     P9 -> N0 [label ="<"]
+//     N0 -> N1 [label="Numero"]
+//     N1 -> N2 [label=">"]
+//     N2 -> N3 [label="digitoentero"]
+//     N2 -> N3 [label="digitodecimal"]
+//     N3 -> N4 [label="<"]
+//     N4 -> N5 [label="/"]
+//     N5 -> N6 [label="Numero"]
+//     N6 -> N7 [label=">"]
+//     // Otro numero
+//     N7 -> N8 [label="<"]
+//     N8 -> N9 [label="Numero"]
+//     N9 -> N10 [label=">"]
+//     N10 -> N11 [label="digitoentero"]
+//     N10 -> N11 [label="digitodecimal"]
+//     N11 -> N12 [label="<"]
+//     N12 -> N13 [label="/"]
+//     N13 -> N14 [label="Numero"]
+//     N14 -> N15 [label=">"]
+//     N15[shape=record]
+//     N7 -> P0
+//     // ponemos operacion
+//     N15 -> P10 [label="<"]  
+//     P10 -> P11 [label="/"]
+//     P11 -> P12 [label="Operacion"]
+//     P13[shape=record]
+//     P12 -> P13 [label=">"]
+//     P13 -> P0
+//     P13 -> P10  
+//     //Terminar tipo
+//     P13 -> T4 [label="<"]
+//     T4 -> T5 [label="/"]
+//     T5 -> T6 [label="Tipo"]
+//     T6 -> T7 [label=">"]
+
+//     //TRIGONOMETRICAS
+//     P2 -> S9 [label ="INVERSO"]
+//     P2 -> S10 [label ="SENO"]
+//     P2 -> S11 [label ="COSENO"]
+//     P2 -> S12 [label ="TANGENTE"]
+
+//     S9,S10,S11,S12 -> S13 [label=">"]
+//     S13 -> N7
+
+// }
